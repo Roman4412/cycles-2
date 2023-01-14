@@ -1,6 +1,10 @@
+
+import java.text.DecimalFormat;
+
 public class Main {
     public static void main(String[] args) {
         // 1
+        System.out.println("TASK 1");
         int savePerMonth = 15_000;
         int totalSaving = 0;
         int targetAmount = 2_459_000;
@@ -12,7 +16,7 @@ public class Main {
         }
         System.out.println("Месяц " + month + ", сумма накоплений равна " + totalSaving);
         // 2
-        System.out.println();
+        System.out.println("TASK 2");
         int count = 1;
         while (count <= 10) {
             System.out.print(count + " ");
@@ -23,7 +27,7 @@ public class Main {
             System.out.print(i + " ");
         }
         // 3
-        System.out.println();
+        System.out.println("TASK 3");
         System.out.println();
         int population = 12_000_000;
         int birthRate = 17;
@@ -35,47 +39,55 @@ public class Main {
             year++;
         }
         // 4
-        int balance = 15_000;
+        System.out.println("TASK 4");
+        double balance = 15_000.0;
         int depositRate = 7;
         targetAmount = 12_000_000;
         count = 1;
         while (balance < targetAmount) {
             balance += (balance / 100 * depositRate);
             System.out.println("Текущий срок вклада в месяцах: " + count);
-            System.out.println("Накопления составляют: " + balance + "\n");
+            String formattedBalance = new DecimalFormat("#0.00").format(balance);
+            System.out.println("Накопления составляют: " + formattedBalance + "\n");
             count++;
         }
         // 5
-        balance = 15_000;
+        System.out.println("TASK 5");
+        balance = 15_000.0;
         count = 1;
         while (balance < targetAmount) {
             balance += (balance / 100 * depositRate);
             if (count % 6 == 0) {
                 System.out.println("Текущий срок вклада в месяцах: " + count);
-                System.out.println("Накопления составляют: " + balance + "\n");
+                String formattedBalance = new DecimalFormat("#0.00").format(balance);
+                System.out.println("Накопления составляют: " + formattedBalance + "\n");
             }
             count++;
         }
         // 6
-        balance = 15_000;
+        System.out.println("TASK 6");
+        balance = 15_000.0;
         count = 1;
         int depositTerm = 9 * 12;
         while (count <= depositTerm) {
             balance += (balance / 100 * depositRate);
                 if (count % 6 == 0) {
+                    String formattedBalance = new DecimalFormat("#0.00").format(balance);
                     System.out.println("Текущий срок вклада в месяцах: " + count);
-                    System.out.println("Накопления составляют: " + balance + "\n");
+                    System.out.println("Накопления составляют: " + formattedBalance + "\n");
                 }
             count++;
         }
         // 7
+        System.out.println("TASK 7");
         int friday = 6;
         while (friday <= 31) {
-            System.out.println("Сегодня пятница, " + friday + "-e число. Необходимо подготовить отчет");
+            System.out.println("Сегодня пятница, " + friday + "-e число. Необходимо подготовить отчет!");
             friday += 7;
         }
         System.out.println();
         // 8
+        System.out.println("TASK 8");
         int  currentYear = 2023;
         int yearOfAppearance = 79;
         while (yearOfAppearance <= currentYear + 100) {
